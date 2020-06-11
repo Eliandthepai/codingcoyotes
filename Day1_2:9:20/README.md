@@ -1,2 +1,0 @@
-# codingcoyotes
-Coding examples
