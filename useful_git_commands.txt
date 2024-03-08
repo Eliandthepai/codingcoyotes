@@ -1,0 +1,6 @@
+#logic for pulling master, check in changes to branch, merging master to branch. 
+# Then pushing changes to branch to create pull request. 
+
+git add .
+git commit -m {come from command line}
+git push confirm?
