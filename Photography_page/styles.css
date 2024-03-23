@@ -73,3 +73,12 @@ input[type="file"] {
 a {
         color:#dfdfe2;
       }
+
+      .menu {
+        width: 80%;
+        background-color: burlywood;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 20px;
+        max-width: 500px
+      }
