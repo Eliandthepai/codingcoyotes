@@ -1,0 +1,62 @@
+Designing a database schema for an online merch store involves identifying the entities (such as products, customers, orders, etc.) and their relationships. Below is a basic schema for such a store:
+
+Entities:
+
+a. Product:
+
+ProductID (Primary Key)
+Name
+Description
+Price
+StockQuantity
+CategoryID (Foreign Key referencing Category table)
+b. Category:
+
+CategoryID (Primary Key)
+Name
+c. Customer:
+
+CustomerID (Primary Key)
+FirstName
+LastName
+Email
+Password
+Address
+City
+State
+ZipCode
+d. Order:
+
+OrderID (Primary Key)
+CustomerID (Foreign Key referencing Customer table)
+OrderDate
+TotalAmount
+e. OrderItem:
+
+OrderItemID (Primary Key)
+OrderID (Foreign Key referencing Order table)
+ProductID (Foreign Key referencing Product table)
+Quantity
+UnitPrice
+Relationships:
+
+A product belongs to one category, but a category can have many products. (One-to-Many relationship: Category to Product)
+A customer can place many orders, but an order belongs to one customer. (One-to-Many relationship: Customer to Order)
+An order can contain multiple items, and an item can belong to only one order. (One-to-Many relationship: Order to OrderItem)
+A product can be part of many orders, and an order can contain multiple products. (Many-to-Many relationship: Product to OrderItem)
+Indexes:
+
+Indexes can be added on frequently searched columns like ProductID, CustomerID, OrderID for faster retrieval.
+Constraints:
+
+Foreign key constraints to maintain data integrity.
+Check constraints on fields like Price to ensure it's non-negative.
+Normalization:
+
+Ensure the database is normalized up to at least 3rd normal form to minimize redundancy and maintain data integrity.
+Additional Considerations:
+
+Incorporate security measures like hashing passwords.
+Consider adding fields for tracking order status (e.g., pending, shipped, delivered).
+Implement features for managing discounts, promotions, and customer reviews.
+This schema provides a basic structure for an online merch store. Depending on specific requirements and business needs, additional tables and fields might be necessary.
